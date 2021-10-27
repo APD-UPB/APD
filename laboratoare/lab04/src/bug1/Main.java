@@ -1,21 +1,18 @@
 package bug1;
-/**
- * @author cristian.chilipirea
- *
- */
+
 public class Main {
-	static final int N = 100000;
-	static int N_ITERATIONS = 100;
+	public static final int N = 100000;
+	public static int N_ITERATIONS = 100;
 
 	public static void main(String[] args) {
-		Thread threads[] = new Thread[2];
+		Thread[] threads = new Thread[2];
 		boolean sw = true;
 		for (int j = 0; j < N_ITERATIONS; j++) {
 			MyThread.value = 0;
-			for (int i = 0; i < 2; i++)
+			for (int i = 0; i < 2; i++) {
 				threads[i] = new Thread(new MyThread());
-			for (int i = 0; i < 2; i++)
 				threads[i].run();
+			}
 			for (int i = 0; i < 2; i++) {
 				try {
 					threads[i].join();
@@ -28,7 +25,8 @@ public class Main {
 				sw = false;
 			}
 		}
-		if (sw)
+		if (sw) {
 			System.out.println("Something is wrong. The value is always correct.");
+		}
 	}
 }
