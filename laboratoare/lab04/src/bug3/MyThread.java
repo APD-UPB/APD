@@ -3,6 +3,8 @@ package bug3;
 /**
  * Why is value set correct even though we use different locks in
  * different threads?
+ *
+ * Modify a single line of code to obtain the expected behaviour (race condition since the monitors are different).
  */
 public class MyThread implements Runnable {
     static final String a = "LOCK";
