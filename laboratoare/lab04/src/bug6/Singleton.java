@@ -3,6 +3,8 @@ package bug6;
 /**
  * What is this design pattern?
  * What it could be wrong in this case? How many instances are created in this context?
+ *
+ * Modify a single line of code such that the Singleton to work as expected.
  */
 
 public class Singleton {

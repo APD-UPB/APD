@@ -1,4 +1,8 @@
 package bug1;
+/*
+	Modify the code such that we can see the bad consequences of
+	the race condition.
+ */
 
 public class Main {
 	public static final int N = 100000;
