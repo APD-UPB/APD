@@ -2,23 +2,24 @@ package multipleProducersMultipleConsumersNBuffer;
 
 import java.util.Queue;
 
-/**
- * @author Gabriel Gutu <gabriel.gutu at upb.ro>
- *
- */
 public class Buffer {
     
-    Queue queue;
+    Queue<Integer> queue;
     
     public Buffer(int size) {
-        queue = new LimitedQueue(size);
+        queue = new LimitedQueue<>(size);
     }
 
-	void put(int value) {
+	public void put(int value) {
         queue.add(value);        
 	}
 
-	int get() {
-        return (int)queue.poll();
+	public int get() {
+        int a = -1;
+        Integer result = queue.poll();
+        if (result != null) {
+            a = result;
+        }
+        return a;
 	}
 }

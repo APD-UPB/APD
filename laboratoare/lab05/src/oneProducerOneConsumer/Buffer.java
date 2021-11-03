@@ -1,16 +1,13 @@
 package oneProducerOneConsumer;
-/**
- * @author cristian.chilipirea
- *
- */
+
 public class Buffer {
-	int a;
+    private int a;
 
-	void put(int value) {
-		a = value;
-	}
+    void put(int value) {
+        a = value;
+    }
 
-	int get() {
-		return a;
-	}
+    int get() {
+        return a;
+    }
 }

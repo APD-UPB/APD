@@ -1,22 +1,20 @@
 package oneProducerOneConsumer;
+
 /**
- * @author cristian.chilipirea
- * 
- *         DO NOT MODIFY
+ * DO NOT MODIFY
  */
 public class Producer implements Runnable {
-	Buffer buffer;
+    private final Buffer buffer;
 
-	Producer(Buffer buffer) {
-		this.buffer = buffer;
-	}
+    public Producer(Buffer buffer) {
+        this.buffer = buffer;
+    }
 
-	@Override
-	public void run() {
-		for (int i = 0; i < Main.N; i++) {
-			buffer.put(i);
-		}
-	}
+    @Override
+    public void run() {
+        for (int i = 0; i < Main.N; i++) {
+            buffer.put(i);
+        }
+    }
 
 }
-/* DO NOT MODIFY */
