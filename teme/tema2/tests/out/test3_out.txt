@@ -1,0 +1,6 @@
+alls_well_act4,10.32,15,1
+alls_well_full,9.87,15,1
+sonnets_50,8.75,14,2
+sonnets_all,8.69,14,2
+sonnets_40,8.63,12,4
+alls_well_act5,8.36,13,1

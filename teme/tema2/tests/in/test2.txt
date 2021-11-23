@@ -1,0 +1,8 @@
+1024
+6
+tests/files/sonnets_10
+tests/files/sonnets_20
+tests/files/sonnets_30
+tests/files/sonnets_40
+tests/files/sonnets_50
+tests/files/sonnets_all

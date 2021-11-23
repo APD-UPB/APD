@@ -1,0 +1,6 @@
+alls_well_act1,11.33,14,1
+alls_well_act4,10.32,15,1
+alls_well_full,9.87,15,1
+alls_well_act3,9.59,13,2
+alls_well_act2,9.43,13,4
+alls_well_act5,8.36,13,1

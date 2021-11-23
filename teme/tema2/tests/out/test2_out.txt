@@ -1,0 +1,6 @@
+sonnets_10,9.39,12,1
+sonnets_20,8.78,13,2
+sonnets_50,8.75,14,2
+sonnets_all,8.69,14,2
+sonnets_40,8.63,12,4
+sonnets_30,8.41,11,7
