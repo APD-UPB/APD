@@ -54,6 +54,5 @@ int main (int argc, char **argv) {
     free(process_arr);
 
     MPI_Finalize();
-    return 0;
 }
 

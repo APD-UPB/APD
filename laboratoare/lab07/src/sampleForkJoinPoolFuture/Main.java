@@ -9,5 +9,6 @@ public class Main {
         FibonacciCalculator calculator = new FibonacciCalculator(10);
         forkJoinPool.execute(calculator);
         System.out.println(calculator.get());
+        forkJoinPool.shutdown();
     }
 }
