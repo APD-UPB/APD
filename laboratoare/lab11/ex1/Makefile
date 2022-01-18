@@ -1,4 +1,4 @@
 build:
 	mpicc ring.c -o ring
-clear:
+clean:
 	rm ring
