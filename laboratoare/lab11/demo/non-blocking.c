@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[])  {
     int numtasks, rank, dest, source, count, flag, tag = 1;
-    char inmsg[MAX_LEN], outmsg[] = "Hello";
+    char inmsg[MAX_LEN], outmsg[] = "Helo";
     MPI_Status status;
     MPI_Request request;
 
@@ -23,7 +23,6 @@ int main(int argc, char *argv[])  {
         sleep(3);
 
         MPI_Isend(outmsg, strlen(outmsg) + 1, MPI_CHAR, dest, tag, MPI_COMM_WORLD, &request);
-        // MPI_Isend(outmsg, strlen(outmsg) + 1, MPI_CHAR, dest, tag, MPI_COMM_WORLD, &request);
         MPI_Test(&request, &flag, &status);
 
         if (flag) {
@@ -51,6 +50,10 @@ int main(int argc, char *argv[])  {
             MPI_Wait(&request, &status);
         }
         
+        /* 
+        se foloseste variabila de status pentru a afla detalii despre schimbul de date
+        functia MPI_Get_count calculeaza numarul de elemente primite
+        */
         MPI_Get_count(&status, MPI_CHAR, &count);
         printf("[P1] Received %d char(s) from process %d with tag %d: %s\n", count, status.MPI_SOURCE, status.MPI_TAG, inmsg);
     }

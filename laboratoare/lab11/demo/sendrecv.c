@@ -29,7 +29,10 @@ int main(int argc, char *argv[])  {
                         &inmsg, 1, MPI_CHAR, source, tag, MPI_COMM_WORLD, &status);
     }
 
-    // se foloseste variabila de status pentru a afla detalii despre schimbul de date
+    /* 
+    se foloseste variabila de status pentru a afla detalii despre schimbul de date
+    functia MPI_Get_count calculeaza numarul de elemente primite
+    */
     MPI_Get_count(&status, MPI_CHAR, &count);
     printf("Process %d received %d char(s) from process %d with tag %d: %c\n",
             rank, count, status.MPI_SOURCE, status.MPI_TAG, inmsg);

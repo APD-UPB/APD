@@ -12,7 +12,7 @@ typedef struct {
 int main(int argc, char *argv[])  {
     int numtasks, rank, source = 0, dest = 1, tag = 1;
 
-    custom_type t;
+    custom_type t, s;
     MPI_Datatype customtype, oldtypes[4];
     int blockcounts[4];
     MPI_Aint offsets[4];
@@ -54,8 +54,8 @@ int main(int argc, char *argv[])  {
         t.i[1] = 1;
         MPI_Send(&t, 1, customtype, dest, tag, MPI_COMM_WORLD);
     } else if (rank == 1) {
-        MPI_Recv(&t, 1, customtype, source, tag, MPI_COMM_WORLD, &status);
-        printf("Received custom type with f1=%.1f, f2=%.1f, c=%c, i[0]=%d, i[1]=%d\n", t.f1, t.f2, t.c, t.i[0], t.i[1]);
+        MPI_Recv(&s, 1, customtype, source, tag, MPI_COMM_WORLD, &status);
+        printf("Received custom type with f1=%.1f, f2=%.1f, c=%c, i[0]=%d, i[1]=%d\n", s.f1, s.f2, s.c, s.i[0], s.i[1]);
     }
 
     // se elibereaza tipul nou cand nu se mai foloseste
