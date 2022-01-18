@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[])  {
     int numtasks, rank, dest, source, count, flag, tag = 1;
-    char inmsg[MAX_LEN], outmsg[] = "Helo";
+    char inmsg[MAX_LEN], outmsg[] = "Hello";
     MPI_Status status;
     MPI_Request request;
 
