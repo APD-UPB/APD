@@ -26,11 +26,11 @@ int main (int argc, char *argv[])
         }
         printf("\n");
 
-        MPI_Send(&arr, size, MPI_INT, 1, 1, MPI_COMM_WORLD);
+        MPI_Send(arr, size, MPI_INT, 1, 1, MPI_COMM_WORLD);
         printf("Process with rank [%d] sent the array.\n", rank);
     } else {
         MPI_Status status;
-        MPI_Recv(&arr, size, MPI_INT, 0, 1, MPI_COMM_WORLD, &status);
+        MPI_Recv(arr, size, MPI_INT, 0, 1, MPI_COMM_WORLD, &status);
         printf("Process with rank [%d], received array with tag %d.\n",
                 rank, status.MPI_TAG);
 
