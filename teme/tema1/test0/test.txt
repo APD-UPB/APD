@@ -1,0 +1,5 @@
+4
+test0/in1.txt
+test0/in2.txt
+test0/in3.txt
+test0/in4.txt

@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  dev-station:
+    build: .
+    volumes:
+      - type: bind
+        source: ../
+        target: /tema1
+    entrypoint: /bin/bash
+    stdin_open: true
+    tty: true
