@@ -45,12 +45,12 @@ function compare_outputs {
 
 # se ruleaza o comanda  (parametru: comanda)
 function run {
-	{ time -p sh -c "timeout 120 $1"; } &> time.txt
+	{ time -p sh -c "timeout 200 $1"; } &> time.txt
 	ret=$?
 
 	if [ $ret == 124 ]
 	then
-		echo "W: Programul a durat mai mult de 120 s"
+		echo "W: Programul a durat mai mult de 200 s"
 	elif [ $ret != 0 ]
 	then
 		echo "W: Rularea nu s-a putut executa cu succes"
@@ -67,12 +67,12 @@ function run {
 
 # se ruleaza o comanda si se masoara timpul (parametru: comanda)
 function run_and_get_time {
-	{ time -p sh -c "timeout 120 $1"; } &> time.txt
+	{ time -p sh -c "timeout 200 $1"; } &> time.txt
 	ret=$?
 
 	if [ $ret == 124 ]
 	then
-		echo "E: Programul a durat mai mult de 120 s"
+		echo "E: Programul a durat mai mult de 200 s"
 		cat time.txt | sed '$d' | sed '$d' | sed '$d'
 		show_score
 		rm -rf test*_sec
@@ -207,7 +207,7 @@ do
 		if [ $i != 1 ]
 		then
 			# se verifica acceleratia de la secvential la 2 thread-uri
-			max=$(echo "${speedup12} > 1.4" | bc -l)
+			max=$(echo "${speedup12} > 1.3" | bc -l)
 			part=$(echo "${speedup12} > 1.1" | bc -l)
 			if [ $max == 1 ]
 			then
@@ -222,8 +222,8 @@ do
 		fi
 
 		# se verifica acceleratia de la secvential la 4 thread-uri
-		max=$(echo "${speedup14} > 2.1" | bc -l)
-		part=$(echo "${speedup14} > 1.8" | bc -l)
+		max=$(echo "${speedup14} > 1.9" | bc -l)
+		part=$(echo "${speedup14} > 1.5" | bc -l)
 		if [ $max == 1 ]
 		then
 			scalability=$((scalability+14))
