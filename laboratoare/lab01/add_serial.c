@@ -11,7 +11,7 @@ int array_size;
 
 int main(int argc, char *argv[]) {
   if (argc < 2) {
-    perror("Specificati dimensiunea array-ului\n");
+    fprintf(stderr, "Specificati dimensiunea array-ului\n");
     exit(-1);
   }
 

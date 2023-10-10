@@ -12,7 +12,7 @@ int num_threads;
 
 int main(int argc, char *argv[]) {
   if (argc < 3) {
-    perror("Specificati dimensiunea array-ului si numarul de thread-uri\n");
+    fprintf(stderr, "Specificati dimensiunea array-ului si numarul de thread-uri\n");
     exit(-1);
   }
 
