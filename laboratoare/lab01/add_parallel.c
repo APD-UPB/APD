@@ -3,19 +3,21 @@
 #include <stdlib.h>
 
 /*
-    implementare seriala pentru exercitiul 5
+    schelet pentru exercitiul 5
 */
 
 int *arr;
 int array_size;
+int num_threads;
 
 int main(int argc, char *argv[]) {
-  if (argc < 2) {
-    perror("Specificati dimensiunea array-ului\n");
+  if (argc < 3) {
+    perror("Specificati dimensiunea array-ului si numarul de thread-uri\n");
     exit(-1);
   }
 
   array_size = atoi(argv[1]);
+  num_threads = atoi(argv[2]);
 
   arr = malloc(array_size * sizeof(int));
   for (int i = 0; i < array_size; i++) {
@@ -31,7 +33,7 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  // Vom folosi varianta implementata serial ca referinta (baseline) pentru calculul acceleratiei (speedup-ului)
+  // TODO: aceasta operatie va fi paralelizata cu num_threads fire de executie
   for (int i = 0; i < array_size; i++) {
     arr[i] += 100;
   }
