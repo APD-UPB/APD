@@ -79,7 +79,7 @@ void *thread_function(void *arg)
 {
 	int thread_id = *(int *)arg;
 
-	// implementati aici OETS paralel
+	// TODO: implementati aici OETS paralel
 
 	pthread_exit(NULL);
 }

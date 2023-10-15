@@ -127,7 +127,7 @@ void *thread_function(void *arg)
 {
 	int thread_id = *(int *)arg;
 
-	// implementati aici shear sort paralel
+	// TODO: implementati aici shear sort paralel
 
 	pthread_exit(NULL);
 }

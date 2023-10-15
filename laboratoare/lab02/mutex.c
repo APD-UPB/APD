@@ -6,6 +6,7 @@
 
 int a = 0;
 
+// TODO: adaugati mutexul in functia de mai jos
 void *f(void *arg)
 {
 	a += 2;

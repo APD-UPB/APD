@@ -8,6 +8,8 @@ int **a;
 int **b;
 int **c;
 
+// TODO: paralelizati operatia din comentariul din functie
+// in interiorul functiei respective
 void *thread_function(void *arg)
 {
 	int thread_id = *(int *)arg;
