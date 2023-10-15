@@ -164,6 +164,10 @@ void sub_matrix(int **C, int startCi, int startCj,  int **A, int startAi, int st
 			C[startCi + i][startCj + j] = A[startAi + i][startAj + j] - B[startBi + i][startBj + j];
 }
 
+// TODO: creati functii separate pentru calculul matricelor
+// in care sa puneti bucati din codul scris in main
+// warning: a nu se paraleliza in main!
+
 int main(int argc, char *argv[])
 {
 	get_args(argc, argv);

@@ -4,6 +4,8 @@
 
 #define NUM_THREADS 2
 
+
+// TODO: de folosit bariera in aceasta functie
 void *f(void *arg)
 {
 	int thread_id = *(int *)arg;
