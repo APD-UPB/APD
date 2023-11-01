@@ -1,7 +1,7 @@
 package bug5;
 
 /**
- * DO NOT MODIFY
+ * * Do NOT modify this file. TODO(s) are in MyThread*.java files.
  */
 public class Main {
     static final int N = 1000000; // Try a smaller value for N
