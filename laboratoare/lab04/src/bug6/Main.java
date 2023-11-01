@@ -1,5 +1,7 @@
 package bug6;
-
+/*
+ *  Nothing to change here. The TODO is in Singleton.java.
+*/
 public class Main {
     public static int NUMBER_OF_THREADS = 8;
 
