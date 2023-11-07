@@ -1,4 +1,4 @@
-package readersWriters.mutualExclusion;
+package readersWriters.conditionedSynchronization;
 
 public class ReaderWriterSharedVars {
     // The value to read/write

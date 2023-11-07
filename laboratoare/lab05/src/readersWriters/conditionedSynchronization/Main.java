@@ -1,4 +1,4 @@
-package readersWriters.mutualExclusion;
+package readersWriters.conditionedSynchronization;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package readersWriters.mutualExclusion;
+package readersWriters.conditionedSynchronization;
 
 public class Writer extends Thread {
     private final int id;
