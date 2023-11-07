@@ -1,4 +1,4 @@
-package readersWriters.writerPriority;
+package readersWriters.mutualExclusion;
 
 public class Reader extends Thread {
     private final int id;

@@ -1,4 +1,4 @@
-package readersWriters.writerPriority;
+package readersWriters.mutualExclusion;
 
 import java.util.List;
 
