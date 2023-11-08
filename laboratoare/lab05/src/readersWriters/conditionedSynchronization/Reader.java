@@ -1,4 +1,4 @@
-package readersWriters.writerPriority;
+package readersWriters.conditionedSynchronization;
 
 public class Reader extends Thread {
     private final int id;

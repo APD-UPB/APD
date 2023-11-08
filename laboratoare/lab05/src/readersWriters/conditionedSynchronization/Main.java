@@ -1,4 +1,4 @@
-package readersWriters.writerPriority;
+package readersWriters.conditionedSynchronization;
 
 import java.util.List;
 
