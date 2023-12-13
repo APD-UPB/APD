@@ -64,13 +64,13 @@ int main(int argc, char * argv[]) {
 			vQSort[i] = v[i];
 		qsort(vQSort, nProcesses - 1, sizeof(int), cmp);
 
-		// TODO sort the vector v
+		// TODO send the vector to rank == 1
 
 
 		displayVector(v);
 		compareVectors(v, vQSort);
 	} else {
-		// TODO sort the vector v
+		// TODO sort the vector v using N processes (N == nProcesses - 1)
 		
 	}
 
