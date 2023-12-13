@@ -1,4 +1,4 @@
 build:
-	mpicc ranksort.c -o ranksort
+	mpicc ranksort.c -lm -o ranksort
 clear:
 	rm ranksort
