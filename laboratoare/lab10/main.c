@@ -5,6 +5,8 @@
 #include <stdlib.h>
 
 #define CONVERGENCE_COEF 100
+#define TAG_SONDA 0
+#define TAG_ECOU 1
 
 /**
  * Run: mpirun -np 12 ./a.out
@@ -58,8 +60,10 @@ int* get_dst(int rank, int numProcs, int leader) {
 	*/
 
 	/*
-	*  TODO2: Vom astepta de la fiecare proces vecin care nu este parintele procesului curent 
-	*		  vectorul de parinti si actualizam vectorul propriu de parinti daca exista informatii aditionale
+	*  TODO2: Vom astepta de la fiecare proces vecin care nu este parintele procesului curent vectorul de parinti sau o sonda.
+            Daca primim un ecou (vector de parinti), actualizam vectorul propriu de parinti daca exista informatii aditionale.
+	    HINT: Pentru simplitate, puteti face mereu recv ca pentru vectorul de parinti si sa verificati size-ul receptiei sau tag-ul
+            pentru a determina daca este sonda sau ecou.
 	*/
 
 	/*
