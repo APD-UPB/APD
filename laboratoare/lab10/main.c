@@ -34,6 +34,11 @@ int* get_dst(int rank, int numProcs, int leader) {
 	/* Vectori de parinti */
 	int *v = malloc(sizeof(int) * numProcs);
 	int *vRecv = malloc(sizeof(int) * numProcs);
+	/* O valoare aleatoare pentru a fi folosita ca sonda.
+ 	 * MPI permite și mesaje de lungime 0, dar pentru 
+         * a da mai multa claritate codului vom folosi aceasta valoare.
+ 	*/ 
+	int sonda = 42;
 
 	memset(v, -1, sizeof(int) * numProcs);
 	memset(vRecv, -1, sizeof(int) * numProcs);
@@ -42,14 +47,14 @@ int* get_dst(int rank, int numProcs, int leader) {
 		v[rank] = -1;
 	else {
 		/* Daca procesul curent nu este liderul, inseamna ca va astepta un mesaj de la un parinte */
-		MPI_Recv(vRecv, numProcs, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status);
+		MPI_Recv(&sonda, 1, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status);
 		v[rank] = status.MPI_SOURCE;
 	}
 
 
 	/*
 	*  TODO2: Pentru fiecare proces vecin care nu este parintele procesului curent,
-	*		  voi trimite vectorul de parinti propriu. 
+	*		  voi trimite o sonda. 
 	*/
 
 	/*
@@ -58,8 +63,7 @@ int* get_dst(int rank, int numProcs, int leader) {
 	*/
 
 	/*
-	*  TODO2: Topologia fiind deja stabilita, orice proces ce nu este lider va propaga
-	* 		  vectorul de vecini parintelui lui si va astepta topologia completa de la acesta
+	*  TODO2: Orice proces ce nu este lider va propaga vectorul de vecini parintelui lui si va astepta topologia completa de la acesta
 	*/
 
 
