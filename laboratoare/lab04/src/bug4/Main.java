@@ -22,5 +22,7 @@ public class Main extends Thread {
         Thread.sleep(1000);
         t.keepRunning = false;
         System.out.println("keepRunning set to false.");
+        t.join();
+        System.out.println("The thread has ended.");
     }
 }
