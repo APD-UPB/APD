@@ -6,15 +6,3 @@ services:
     entrypoint: /bin/bash
     stdin_open: true
     tty: true
-    #volumes:
-    #  - type: bind
-    #    source: ./outs
-    #    target: /opt/dev/labs
-    #deploy:
-     # resources:
-      #  limits:
-          #cpus: '4'
-          #cpu-period: '20000'
-          #cpu-quota: '400000'
-
- #--cpu-period="80000" and --cpu-quota="200000"

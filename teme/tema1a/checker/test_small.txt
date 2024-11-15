@@ -1,0 +1,4 @@
+3
+test_in_small/file1.txt
+test_in_small/file2.txt
+test_in_small/file3.txt

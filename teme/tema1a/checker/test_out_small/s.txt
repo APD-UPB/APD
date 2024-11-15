@@ -1,0 +1,6 @@
+sky:[1 2 3]
+shine:[3]
+shines:[1]
+singing:[1]
+stars:[3]
+sun:[1]
