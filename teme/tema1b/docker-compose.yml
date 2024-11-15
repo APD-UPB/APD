@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  apd_service:
+    build: .
+    container_name: apd_container
+    entrypoint: /bin/bash
+    stdin_open: true
+    tty: true
