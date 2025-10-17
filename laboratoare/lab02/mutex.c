@@ -3,13 +3,15 @@
 #include <pthread.h>
 
 #define NUM_THREADS 2
+#define NUM_REPEAT 1000
 
 int a = 0;
 
 // TODO: adaugati mutexul in functia de mai jos
 void *f(void *arg)
 {
-	a += 2;
+	for (int i = 0; i < NUM_REPEAT; i++)
+		a += 2;
 
 	pthread_exit(NULL);
 }
