@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 N=1000
 P=2
